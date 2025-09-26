@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">test</string>
+    <string name="title_text">Sign Up</string>
+    <string name="title_text2">Log In</string>
+    <string name="Submit">Submit</string>
+    <string name="Login">Already have an account?</string>
+    <string name="Signup">Don\'t have an account?</string>
+    <string name="subtitle">to create an account</string>
+    <string name="subtitle2">to continue</string>
+    <string name="Fullname">Full name</string>
+    <string name="Email">Email</string>
+    <string name="Gender">Gender</string>
+    <string name="Date">Date</string>
+    <string name="SelectBirthdate">Select Birthdate</string>
+    <string name="Female">Female</string>
+    <string name="Male">Male</string>
+    <string name="Username">Username</string>
+    <string name="Password">Password</string>
+    <string name="Confirm_Password">Confirm Password</string>
+    <string name="Show_Password">Show Password</string>
+    <string name="Show_confirm_password">Show Confirm Password</string>
+</resources>
