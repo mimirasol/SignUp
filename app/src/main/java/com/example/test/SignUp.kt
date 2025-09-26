@@ -97,7 +97,7 @@ class SignUp : AppCompatActivity() {
                 Toast.makeText(this, "Please fill up all fields!", Toast.LENGTH_LONG).show()
             }
             else if (password != confirmpass) {
-                Toast.makeText(this, "Password does not match1", Toast.LENGTH_LONG).show()
+                Toast.makeText(this, "Password does not match", Toast.LENGTH_LONG).show()
             }
             else {
                 Toast.makeText(this, "Sign up successful!", Toast.LENGTH_LONG).show()
