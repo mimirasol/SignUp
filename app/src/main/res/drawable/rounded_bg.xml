@@ -1,0 +1,5 @@
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+    <solid android:color="#FFFFFF"/> <!-- background behind image (not visible if image fills) -->
+    <corners android:radius="12dp"/>
+</shape>
