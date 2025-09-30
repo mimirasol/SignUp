@@ -38,10 +38,12 @@ class SignUp : AppCompatActivity() {
         val showconfirmpass = findViewById<CheckBox>(R.id.showconfirmpassword)
 
         val calendarView = findViewById<CalendarView>(R.id.calendar)
+        val bgOverlay = findViewById<View>(R.id.transBg)
         val rawbirthdate = findViewById<TextView>(R.id.birthdate)
         val showDateBtn = findViewById<Button>(R.id.showDate)
 
         calendarView.visibility = View.GONE
+        bgOverlay.visibility = View.GONE
 
         showDateBtn.setOnClickListener {
             if (calendarView.visibility == View.GONE) {
@@ -50,6 +52,13 @@ class SignUp : AppCompatActivity() {
                 calendarView.visibility = View.GONE
             }
             calendarView.requestLayout()
+
+            if (bgOverlay.visibility == View.GONE) {
+                bgOverlay.visibility = View.VISIBLE
+            } else {
+                bgOverlay.visibility = View.GONE
+            }
+            bgOverlay.requestLayout()
         }
 
         calendarView.setOnDateChangeListener {view, year, month, dayOfMonth ->
@@ -57,6 +66,7 @@ class SignUp : AppCompatActivity() {
             rawbirthdate.text = selectedDate
 
             calendarView.visibility = View.GONE
+            bgOverlay.visibility = View.GONE
         }
 
         val submitBtn = findViewById<Button>(R.id.signup)
