@@ -10,11 +10,55 @@
 
     <Button
         android:id="@+id/button"
-        android:layout_width="348dp"
+        android:layout_width="345dp"
         android:layout_height="119dp"
+        android:background="@drawable/homepage_buttons"
+        android:backgroundTint="@null"
         android:text="MEET THE TEAM"
         android:textColor="#0f4162"
-        android:backgroundTint="#ffffff"
-        tools:layout_editor_absoluteX="31dp"
-        tools:layout_editor_absoluteY="257dp" />
+        app:backgroundTint="@null"
+        app:layout_constraintBottom_toTopOf="@+id/button4"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="33dp"
+        android:layout_marginTop="190dp"/>
+
+    <Button
+        android:id="@+id/button5"
+        android:layout_width="345dp"
+        android:layout_height="119dp"
+        android:background="@drawable/homepage_buttons"
+        android:backgroundTint="#0f4162"
+        android:text="COMING SOON"
+        android:textColor="#ffffff"
+        app:backgroundTint="#0f4162"
+        app:layout_constraintBottom_toTopOf="@+id/button6"
+        app:layout_constraintTop_toBottomOf="@+id/button4"
+        tools:layout_editor_absoluteX="33dp" />
+
+    <Button
+        android:id="@+id/button6"
+        android:layout_width="345dp"
+        android:layout_height="119dp"
+        android:background="@drawable/homepage_buttons"
+        android:backgroundTint="#0f4162"
+        android:text="COMING SOON"
+        android:textColor="#ffffff"
+        app:backgroundTint="#0f4162"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button5"
+        tools:layout_editor_absoluteX="33dp" />
+
+    <Button
+        android:id="@+id/button4"
+        android:layout_width="345dp"
+        android:layout_height="119dp"
+        android:background="@drawable/homepage_buttons"
+        android:backgroundTint="#0f4162"
+        android:text="COMING SOON"
+        android:textColor="#ffffff"
+        app:backgroundTint="#0f4162"
+        app:layout_constraintBottom_toTopOf="@+id/button5"
+        app:layout_constraintTop_toBottomOf="@+id/button"
+        tools:layout_editor_absoluteX="33dp" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
