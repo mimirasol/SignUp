@@ -6,21 +6,68 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".homepage"
-    android:background="@drawable/homepage_bg">
+    android:background="@drawable/gradient_homepage">
+
+    <View
+        android:id="@+id/view5"
+        android:layout_width="220dp"
+        android:layout_height="60dp"
+        android:background="@drawable/dashboard_bg"
+        android:backgroundTint="#0f4162"
+        tools:layout_editor_absoluteX="76dp"
+        tools:layout_editor_absoluteY="115dp" />
+
+    <View
+        android:id="@+id/view4"
+        android:layout_width="220dp"
+        android:layout_height="60dp"
+        android:background="@drawable/dashboard_bg"
+        android:backgroundTint="#5e89a5"
+        tools:layout_editor_absoluteX="133dp"
+        tools:layout_editor_absoluteY="108dp" />
+
+    <View
+        android:id="@+id/view3"
+        android:layout_width="220dp"
+        android:layout_height="60dp"
+        android:background="@drawable/dashboard_bg"
+        tools:layout_editor_absoluteX="207dp"
+        tools:layout_editor_absoluteY="100dp" />
+
+    <View
+        android:id="@+id/white_bg"
+        android:layout_width="wrap_content"
+        android:layout_height="750dp"
+        android:background="#ffffff"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="143dp" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/introrust"
+        android:text="DASHBOARD"
+        android:textColor="#0f4162"
+        android:textSize="20dp"
+        tools:layout_editor_absoluteX="248dp"
+        tools:layout_editor_absoluteY="108dp" />
 
     <Button
         android:id="@+id/button"
         android:layout_width="345dp"
         android:layout_height="119dp"
+        android:layout_marginTop="190dp"
         android:background="@drawable/homepage_buttons"
         android:backgroundTint="@null"
+        android:fontFamily="@font/afacad_bold"
         android:text="MEET THE TEAM"
+        android:textSize="30dp"
         android:textColor="#0f4162"
         app:backgroundTint="@null"
         app:layout_constraintBottom_toTopOf="@+id/button4"
         app:layout_constraintTop_toTopOf="parent"
-        tools:layout_editor_absoluteX="33dp"
-        android:layout_marginTop="190dp"/>
+        tools:layout_editor_absoluteX="33dp" />
 
     <Button
         android:id="@+id/button5"
@@ -28,7 +75,9 @@
         android:layout_height="119dp"
         android:background="@drawable/homepage_buttons"
         android:backgroundTint="#0f4162"
+        android:fontFamily="@font/afacad_bold"
         android:text="COMING SOON"
+        android:textSize="25dp"
         android:textColor="#ffffff"
         app:backgroundTint="#0f4162"
         app:layout_constraintBottom_toTopOf="@+id/button6"
@@ -41,7 +90,9 @@
         android:layout_height="119dp"
         android:background="@drawable/homepage_buttons"
         android:backgroundTint="#0f4162"
+        android:fontFamily="@font/afacad_bold"
         android:text="COMING SOON"
+        android:textSize="25dp"
         android:textColor="#ffffff"
         app:backgroundTint="#0f4162"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -54,11 +105,14 @@
         android:layout_height="119dp"
         android:background="@drawable/homepage_buttons"
         android:backgroundTint="#0f4162"
+        android:fontFamily="@font/afacad_bold"
         android:text="COMING SOON"
+        android:textSize="25dp"
         android:textColor="#ffffff"
         app:backgroundTint="#0f4162"
         app:layout_constraintBottom_toTopOf="@+id/button5"
         app:layout_constraintTop_toBottomOf="@+id/button"
         tools:layout_editor_absoluteX="33dp" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
