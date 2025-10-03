@@ -9,7 +9,7 @@
     tools:context=".JepDescription">
 
     <ImageButton
-        android:id="@+id/imageButton"
+        android:id="@+id/backButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="@android:color/transparent"
@@ -19,7 +19,8 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.019"
-        app:srcCompat="@drawable/jep_back_button" />
+        app:srcCompat="@drawable/jep_back_button"
+        />
 
     <TextView
         android:id="@+id/header_title"
@@ -31,26 +32,26 @@
         android:textSize="30dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.203"
+        app:layout_constraintHorizontal_bias="0.209"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.481" />
+        app:layout_constraintVertical_bias="0.485" />
 
     <TextView
         android:id="@+id/personal_bg_header"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
         android:fontFamily="@font/introrust"
         android:text="personal background"
         android:textColor="#a52b31"
         android:textSize="23.5dp"
-        android:layout_marginTop="50dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.317"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.688" />
+        app:layout_constraintVertical_bias="0.774" />
 
     <TextView
         android:id="@+id/title_description"
@@ -60,15 +61,15 @@
         android:fontFamily="@font/dmsans"
         android:justificationMode="inter_word"
         android:paddingTop="10dp"
-        android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris "
+        android:text="I’ll be handling the UI design of our project, with my main focus on front-end development. At the same time, I’ll also be supporting the back-end side whenever needed so our system works smoothly as one. On top of that, I manage the group to keep us on track, organized, and moving forward as a team."
         android:textColor="#a52b31"
         android:textSize="17dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.478"
+        app:layout_constraintHorizontal_bias="0.492"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.575" />
+        app:layout_constraintVertical_bias="0.619" />
 
     <TextView
         android:id="@+id/name_title"
@@ -85,7 +86,7 @@
         app:layout_constraintHorizontal_bias="0.094"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.764" />
+        app:layout_constraintVertical_bias="0.830" />
 
     <TextView
         android:id="@+id/name"
@@ -98,10 +99,10 @@
         android:textSize="17dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.736"
+        app:layout_constraintHorizontal_bias="0.744"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.764" />
+        app:layout_constraintVertical_bias="0.830" />
 
     <TextView
         android:id="@+id/age_title"
@@ -118,7 +119,7 @@
         app:layout_constraintHorizontal_bias="0.091"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.825" />
+        app:layout_constraintVertical_bias="0.875" />
 
     <TextView
         android:id="@+id/age"
@@ -131,10 +132,10 @@
         android:textSize="17dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.481"
+        app:layout_constraintHorizontal_bias="0.478"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.825" />
+        app:layout_constraintVertical_bias="0.875" />
 
     <TextView
         android:id="@+id/specialty_title"
@@ -142,16 +143,16 @@
         android:layout_height="wrap_content"
         android:fontFamily="@font/dmsans"
         android:justificationMode="inter_word"
-        android:text="Specialty: "
+        android:text="Role: "
         android:textColor="#a52b31"
         android:textSize="17dp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.103"
+        app:layout_constraintHorizontal_bias="0.092"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.886" />
+        app:layout_constraintVertical_bias="0.920" />
 
     <TextView
         android:id="@+id/hobbies_title"
@@ -159,16 +160,16 @@
         android:layout_height="wrap_content"
         android:fontFamily="@font/dmsans"
         android:justificationMode="inter_word"
-        android:text="Hobbies: "
+        android:text="Main: "
         android:textColor="#a52b31"
         android:textSize="17dp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.1"
+        app:layout_constraintHorizontal_bias="0.093"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.944" />
+        app:layout_constraintVertical_bias="0.965" />
 
     <TextView
         android:id="@+id/specialty"
@@ -176,15 +177,15 @@
         android:layout_height="wrap_content"
         android:fontFamily="@font/dmsans"
         android:justificationMode="inter_word"
-        android:text="Back-end Programming "
+        android:text="Initiator"
         android:textColor="#a52b31"
         android:textSize="17dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.85"
+        app:layout_constraintHorizontal_bias="0.538"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.886" />
+        app:layout_constraintVertical_bias="0.920" />
 
     <TextView
         android:id="@+id/hobbies"
@@ -192,14 +193,14 @@
         android:layout_height="wrap_content"
         android:fontFamily="@font/dmsans"
         android:justificationMode="inter_word"
-        android:text="Playing badminton"
+        android:text="Gekko"
         android:textColor="#a52b31"
         android:textSize="17dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.708"
+        app:layout_constraintHorizontal_bias="0.523"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.943" />
+        app:layout_constraintVertical_bias="0.965" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
