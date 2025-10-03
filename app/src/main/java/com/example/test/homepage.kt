@@ -1,6 +1,9 @@
 package com.example.test
 
+import android.content.Intent
 import android.os.Bundle
+import android.widget.Button
+import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -15,6 +18,15 @@ class homepage : AppCompatActivity() {
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
+        }
+
+        val logoutButton = findViewById<Button>(R.id.logoutBtn)
+
+        logoutButton.setOnClickListener {
+            Toast.makeText(this, "Logging Out...", Toast.LENGTH_LONG).show()
+
+            val loginPage = Intent(this, LogIn::class.java)
+            startActivity(loginPage)
         }
     }
 }
