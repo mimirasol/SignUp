@@ -114,5 +114,24 @@
         app:layout_constraintTop_toBottomOf="@+id/button"
         tools:layout_editor_absoluteX="33dp" />
 
+    <View
+        android:id="@+id/view"
+        android:layout_width="345dp"
+        android:layout_height="10dp"
+        android:background="@drawable/dashboard_bg"
+        android:backgroundTint="#0f4162"
+        tools:layout_editor_absoluteX="33dp"
+        tools:layout_editor_absoluteY="175dp" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="107dp"
+        android:layout_height="38dp"
+        android:fontFamily="@font/afacad_bold"
+        android:text="LOG OUT"
+        android:backgroundTint="#DBEBF4"
+        tools:layout_editor_absoluteX="288dp"
+        tools:layout_editor_absoluteY="26dp" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
