@@ -4,6 +4,9 @@ import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import android.widget.Toast
+import android.widget.ToggleButton
+import android.widget.TextView
+import android.view.View
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -34,5 +37,32 @@ class homepage : AppCompatActivity() {
             val galleryButton = Intent(this, Gallery::class.java)
             startActivity(galleryButton)
         }
+
+        val toggle = findViewById<ToggleButton>(R.id.themeBtn)
+        val rootLayout = findViewById<View>(R.id.main) // Your parent layout
+        val bg = findViewById<View>(R.id.mainBg)
+        val tab = findViewById<View>(R.id.whiteTab)
+        val bar = findViewById<View>(R.id.bar)
+        val tabText = findViewById<TextView>(R.id.tabText)
+
+        toggle.setOnCheckedChangeListener { _, isChecked ->
+            if (isChecked) {
+                // 🌙 Dark Mode
+                rootLayout.setBackgroundColor(resources.getColor(R.color.darkblue))
+                bg.setBackgroundColor(resources.getColor(R.color.lightblack))
+                tab.setBackgroundColor(resources.getColor(R.color.lightblack))
+                bar.setBackgroundColor(resources.getColor(R.color.white))
+                tabText.setTextColor(resources.getColor(R.color.white))
+
+            } else {
+                // ☀️ Light Mode
+                rootLayout.setBackgroundColor(resources.getColor(R.color.blue))
+                bg.setBackgroundColor(resources.getColor(R.color.white))
+                tab.setBackgroundColor(resources.getColor(R.color.white))
+                bar.setBackgroundColor(resources.getColor(R.color.darkblue))
+                tabText.setTextColor(resources.getColor(R.color.darkblue))
+            }
+        }
+
     }
 }
