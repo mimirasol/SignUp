@@ -61,7 +61,7 @@
         android:fontFamily="@font/dmsans"
         android:justificationMode="inter_word"
         android:paddingTop="10dp"
-        android:text="I’ll be handling the UI design of our project, with my main focus on front-end development. At the same time, I’ll also be supporting the back-end side whenever needed so our system works smoothly as one. On top of that, I manage the group to keep us on track, organized, and moving forward as a team."
+        android:text="@string/jep_description"
         android:textColor="#a52b31"
         android:textSize="17dp"
         app:layout_constraintBottom_toBottomOf="parent"

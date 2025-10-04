@@ -17,7 +17,7 @@ import android.widget.CalendarView
 import android.view.View
 import android.widget.TextView
 
-class SignUp : AppCompatActivity() {
+class       SignUp : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
