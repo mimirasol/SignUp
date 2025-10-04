@@ -79,7 +79,7 @@
         app:layout_constraintTop_toBottomOf="@+id/button4" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/Gallerybtn"
         android:layout_width="345dp"
         android:layout_height="119dp"
         android:layout_marginTop="190dp"
@@ -109,7 +109,7 @@
         app:backgroundTint="#0f4162"
         app:layout_constraintBottom_toTopOf="@+id/button5"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button" />
+        app:layout_constraintTop_toBottomOf="@+id/Gallerybtn" />
 
     <Button
         android:id="@+id/button6"
@@ -146,6 +146,7 @@
         android:layout_marginEnd="16dp"
         android:backgroundTint="#DBEBF4"
         android:fontFamily="@font/afacad_bold"
+        android:textColor="@color/darkblue"
         android:text="LOG OUT"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />

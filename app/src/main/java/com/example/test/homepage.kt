@@ -21,12 +21,18 @@ class homepage : AppCompatActivity() {
         }
 
         val logoutButton = findViewById<Button>(R.id.logoutBtn)
+        val galleryButton = findViewById<Button>(R.id.Gallerybtn)
 
         logoutButton.setOnClickListener {
             Toast.makeText(this, "Logging Out...", Toast.LENGTH_LONG).show()
 
             val loginPage = Intent(this, LogIn::class.java)
             startActivity(loginPage)
+        }
+
+        galleryButton.setOnClickListener {
+            val galleryButton = Intent(this, Gallery::class.java)
+            startActivity(galleryButton)
         }
     }
 }

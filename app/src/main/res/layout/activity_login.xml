@@ -10,6 +10,19 @@
     tools:layout_editor_absoluteY="-6dp"
     android:background="@drawable/bg_image">
 
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:indeterminate="true"
+        android:visibility="invisible"
+        android:indeterminateTint="@color/darkblue"
+        android:max="100"
+        android:progress="0"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="181dp"
+        tools:layout_editor_absoluteY="296dp" />
+
     <EditText
         android:id="@+id/email"
         android:layout_width="294dp"

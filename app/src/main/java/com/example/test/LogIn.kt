@@ -12,6 +12,10 @@ import android.widget.EditText
 import android.widget.Button
 import android.widget.CheckBox
 import android.widget.Toast
+import android.os.CountDownTimer
+import android.view.View
+import android.widget.ProgressBar
+
 
 class LogIn : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -31,6 +35,8 @@ class LogIn : AppCompatActivity() {
         val username = intent.getStringExtra("username")
         val signupemail = intent.getStringExtra("email")
         val confirmpass = intent.getStringExtra("password")
+
+        val loadingBar = findViewById<ProgressBar>(R.id.progressBar)
 
         val submitBtn = findViewById<Button>(R.id.signup)
         val signup = findViewById<Button>(R.id.signupPageBtn)
@@ -57,11 +63,28 @@ class LogIn : AppCompatActivity() {
                 Toast.makeText(this, "Invalid password!", Toast.LENGTH_LONG).show()
             }
             else {
-                Toast.makeText(this, "Log in successful!", Toast.LENGTH_LONG).show()
-                Toast.makeText(this, "Hello, $username!", Toast.LENGTH_LONG).show()
+//                Toast.makeText(this, "Log in successful!", Toast.LENGTH_LONG).show()
+//                Toast.makeText(this, "Hello, $username!", Toast.LENGTH_LONG).show()
+//
+//                val dashboardPage = Intent(this, homepage::class.java)
+//                startActivity(dashboardPage)
+                loadingBar.visibility = View.VISIBLE
+                loadingBar.progress = 0
 
-                val dashboardPage = Intent(this, homepage::class.java)
-                startActivity(dashboardPage)
+                // Fake loading using CountDownTimer
+                object : CountDownTimer(2000, 50) {
+                    override fun onTick(millisUntilFinished: Long) {
+                        val progress = ((2000 - millisUntilFinished) / 20).toInt()
+                        loadingBar.progress = progress
+                    }
+
+                    override fun onFinish() {
+                        loadingBar.progress = 100
+                        // Switch activity after loading
+                        val dashboardPage = Intent(this, homepage::class.java)
+                    startActivity(dashboardPage)
+                    }
+                }.start()
             }
         }
 
