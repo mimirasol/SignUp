@@ -68,21 +68,19 @@ class LogIn : AppCompatActivity() {
 //
 //                val dashboardPage = Intent(this, homepage::class.java)
 //                startActivity(dashboardPage)
+                // Show spinning progress bar
                 loadingBar.visibility = View.VISIBLE
-                loadingBar.progress = 0
 
-                // Fake loading using CountDownTimer
-                object : CountDownTimer(2000, 50) {
+                // Fake loading with CountDownTimer
+                object : CountDownTimer(2000, 1000) {
                     override fun onTick(millisUntilFinished: Long) {
-                        val progress = ((2000 - millisUntilFinished) / 20).toInt()
-                        loadingBar.progress = progress
+                        // We don’t need progress updates for indeterminate spinner
                     }
 
                     override fun onFinish() {
-                        loadingBar.progress = 100
-                        // Switch activity after loading
-                        val dashboardPage = Intent(this, homepage::class.java)
-                    startActivity(dashboardPage)
+                        loadingBar.visibility = View.GONE
+                        val dashboardPage = Intent(this@LogIn, homepage::class.java)
+                        startActivity(dashboardPage)
                     }
                 }.start()
             }

@@ -7,6 +7,7 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import android.widget.Button
 
 class Gallery : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -24,6 +25,12 @@ class Gallery : AppCompatActivity() {
         val jeffPage = findViewById<ImageView>(R.id.jeff_gallery)
         val extraPage = findViewById<ImageView>(R.id.extra_gallery)
         val extraPage2 = findViewById<ImageView>(R.id.extra2_gallery)
+        val returnDashboard = findViewById<Button>(R.id.return_dashboard)
+
+        returnDashboard.setOnClickListener {
+            val backDashboard = Intent(this, homepage::class.java)
+            startActivity(backDashboard)
+        }
 
         miraPage.setOnClickListener {
             val miraDesc = Intent(this, MiraDescription::class.java)
