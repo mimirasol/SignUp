@@ -36,6 +36,8 @@ class LogIn : AppCompatActivity() {
         val signupemail = intent.getStringExtra("email")
         val confirmpass = intent.getStringExtra("password")
 
+        val transparentBG = findViewById<View>(R.id.transBg)
+
         val loadingBar = findViewById<ProgressBar>(R.id.progressBar)
 
         val submitBtn = findViewById<Button>(R.id.signup)
@@ -70,6 +72,8 @@ class LogIn : AppCompatActivity() {
 //                startActivity(dashboardPage)
                 // Show spinning progress bar
                 loadingBar.visibility = View.VISIBLE
+                transparentBG.visibility = View.VISIBLE
+
 
                 // Fake loading with CountDownTimer
                 object : CountDownTimer(2000, 1000) {
