@@ -59,6 +59,9 @@ class LogIn : AppCompatActivity() {
             else {
                 Toast.makeText(this, "Log in successful!", Toast.LENGTH_LONG).show()
                 Toast.makeText(this, "Hello, $username!", Toast.LENGTH_LONG).show()
+
+                val dashboardPage = Intent(this, homepage::class.java)
+                startActivity(dashboardPage)
             }
         }
 
