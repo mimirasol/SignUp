@@ -28,12 +28,11 @@ class LogIn : AppCompatActivity() {
             insets
         }
 
-        val rawemail = findViewById<EditText>(R.id.email)
+        val rawusername = findViewById<EditText>(R.id.username)
         val rawpassword = findViewById<EditText>(R.id.newPassword)
         val showpass = findViewById<CheckBox>(R.id.showpassword)
 
-        val username = intent.getStringExtra("username")
-        val signupemail = intent.getStringExtra("email")
+        val signupusername = intent.getStringExtra("username")
         val confirmpass = intent.getStringExtra("password")
 
         val transparentBG = findViewById<View>(R.id.transBg)
@@ -52,14 +51,14 @@ class LogIn : AppCompatActivity() {
         }
 
         submitBtn.setOnClickListener {
-            val email = rawemail.text.toString()
+            val username = rawusername.text.toString()
             val password = rawpassword.text.toString()
 
-            if (email.isEmpty() || password.isEmpty()) {
+            if (username.isEmpty() || password.isEmpty()) {
                 Toast.makeText(this, "Please fill up all fields!", Toast.LENGTH_LONG).show()
             }
-            else if (email != signupemail) {
-                Toast.makeText(this, "Email does not exist!", Toast.LENGTH_LONG).show()
+            else if (username != signupusername) {
+                Toast.makeText(this, "User does not exist!", Toast.LENGTH_LONG).show()
             }
             else if (password != confirmpass) {
                 Toast.makeText(this, "Invalid password!", Toast.LENGTH_LONG).show()
