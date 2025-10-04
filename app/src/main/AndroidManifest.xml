@@ -12,11 +12,14 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Test">
         <activity
-            android:name=".homepage"
+            android:name=".TeamPage"
+            android:exported="false" />
+        <activity
+            android:name=".SignUp"
             android:exported="false" />
         <activity android:name=".LogIn" />
         <activity
-            android:name=".SignUp"
+            android:name=".Gallery"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -24,6 +27,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".NathanDescription" />
+        <activity android:name=".JepDescription" />
+        <activity android:name=".SamDescription" />
+        <activity android:name=".MiraDescription" />
     </application>
 
 </manifest>
