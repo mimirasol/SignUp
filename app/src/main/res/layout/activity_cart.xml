@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Cart"
+    android:background="#e9f4ff">
+
+    <View
+        android:id="@+id/checkoutBox"
+        android:layout_width="wrap_content"
+        android:layout_height="315dp"
+        android:layout_marginTop="612dp"
+        android:background="@drawable/dashboard_bg"
+        android:backgroundTint="@color/darkblue"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/devfeeTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="688dp"
+        android:layout_marginEnd="256dp"
+        android:fontFamily="@font/dmsansmedium"
+        android:text="Delivery Fee"
+        android:textColor="@color/white"
+        android:textSize="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/subtotalTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="644dp"
+        android:layout_marginEnd="292dp"
+        android:fontFamily="@font/dmsansmedium"
+        android:text="Subtotal"
+        android:textColor="@color/white"
+        android:textSize="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/totalTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="748dp"
+        android:layout_marginEnd="324dp"
+        android:fontFamily="@font/dmsansmedium"
+        android:text="Total"
+        android:textColor="@color/white"
+        android:textSize="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/headerTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="92dp"
+        android:layout_marginEnd="172dp"
+        android:fontFamily="@font/poppins_bold"
+        android:text="Your Cart"
+        android:textColor="@color/darkblue"
+        android:textSize="40dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/checkoutBtn"
+        android:layout_width="330dp"
+        android:layout_height="58dp"
+        android:layout_marginTop="804dp"
+        android:layout_marginEnd="40dp"
+        android:background="@drawable/dashboard_bg"
+        android:backgroundTint="@color/white"
+        android:fontFamily="@font/poppins_bold"
+        android:text="Check Out"
+        android:textColor="@color/darkblue"
+        android:textSize="25dp"
+        app:backgroundTint="@null"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/line"
+        android:layout_width="330dp"
+        android:layout_height="2dp"
+        android:layout_marginTop="736dp"
+        android:layout_marginEnd="40dp"
+        android:background="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
