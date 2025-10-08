@@ -5,8 +5,8 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/brownies_page_bg"
-    tools:context=".BrowniesOrder">
+    android:background="@drawable/brookies_page_bg"
+    tools:context=".BrookiesOrder">
 
     <ImageButton
         android:id="@+id/backButton"
@@ -28,7 +28,7 @@
         android:layout_width="198dp"
         android:layout_height="wrap_content"
         android:fontFamily="@font/poppins_bold"
-        android:text="Classic Brownies"
+        android:text="Brookies"
         android:textColor="#0f4162"
         android:textSize="35dp"
         android:lineSpacingMultiplier="0.85"
@@ -37,16 +37,16 @@
         app:layout_constraintHorizontal_bias="0.079"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.078" />
+        app:layout_constraintVertical_bias="0.1" />
 
 
     <TextView
         android:id="@+id/headerDesc"
-        android:layout_width="200dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/dmsans"
         android:lineSpacingMultiplier="0.85"
-        android:text="Classic chocolate brownies"
+        android:text="Brownies with cookies"
         android:textColor="#5e89a5"
         android:textSize="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -54,7 +54,7 @@
         app:layout_constraintHorizontal_bias="0.08"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.191" />
+        app:layout_constraintVertical_bias="0.153" />
 
     <TextView
         android:id="@+id/detailsTitle"
@@ -66,18 +66,18 @@
         android:textSize="19dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.116"
+        app:layout_constraintHorizontal_bias="0.114"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.597" />
 
     <TextView
         android:id="@+id/details"
-        android:layout_width="266dp"
+        android:layout_width="270dp"
         android:layout_height="wrap_content"
         android:fontFamily="@font/dmsans"
         android:lineSpacingMultiplier="0.7"
-        android:text="Made with dark chocolate compound that brings out a rich fudgy flavor"
+        android:text="Classic brownies infused with cookies for that extra crunch and fudgy goodness"
         android:textColor="#0f4162"
         android:textSize="14dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -170,7 +170,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/dmsansmedium"
-        android:text="P 45"
+        android:text="P 52"
         android:textColor="@color/white"
         android:textSize="17dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -185,7 +185,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/dmsansmedium"
-        android:text="P 140"
+        android:text="P 155"
         android:textColor="@color/white"
         android:textSize="17dp"
         app:layout_constraintBottom_toBottomOf="parent"

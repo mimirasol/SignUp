@@ -1,28 +1,28 @@
 package com.example.test
 
 import android.os.Bundle
-import android.widget.*
+import android.widget.Button
+import android.widget.ImageButton
+import android.widget.RadioButton
+import android.widget.TextView
+import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 
-class BrowniesOrder : AppCompatActivity() {
-
+class CookiesOrder : AppCompatActivity() {
     private var quantity = 1
-    private var selectedPack = 3
-
+    private var selectedPack = 1
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
-        setContentView(R.layout.activity_brownies_order)
-
+        setContentView(R.layout.activity_cookies_order)
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
-
         val btnMinus = findViewById<ImageButton>(R.id.minusButton)
         val btnPlus = findViewById<ImageButton>(R.id.addButton)
         val qtyTextView = findViewById<TextView>(R.id.orderCount)
@@ -50,11 +50,11 @@ class BrowniesOrder : AppCompatActivity() {
         }
 
         choice1.setOnCheckedChangeListener { _, isChecked ->
-            if (isChecked) selectedPack = 3
+            if (isChecked) selectedPack = 1
         }
 
         choice2.setOnCheckedChangeListener { _, isChecked ->
-            if (isChecked) selectedPack = 9
+            if (isChecked) selectedPack = 5
         }
 
 

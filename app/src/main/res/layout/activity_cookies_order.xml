@@ -5,8 +5,8 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/brownies_page_bg"
-    tools:context=".BrowniesOrder">
+    android:background="@drawable/cookies_page_bg"
+    tools:context=".CookiesOrder">
 
     <ImageButton
         android:id="@+id/backButton"
@@ -25,10 +25,10 @@
 
     <TextView
         android:id="@+id/headerTitle"
-        android:layout_width="198dp"
+        android:layout_width="220dp"
         android:layout_height="wrap_content"
         android:fontFamily="@font/poppins_bold"
-        android:text="Classic Brownies"
+        android:text="Choco Chip Cookies"
         android:textColor="#0f4162"
         android:textSize="35dp"
         android:lineSpacingMultiplier="0.85"
@@ -37,24 +37,24 @@
         app:layout_constraintHorizontal_bias="0.079"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.078" />
+        app:layout_constraintVertical_bias="0.1" />
 
 
     <TextView
         android:id="@+id/headerDesc"
-        android:layout_width="200dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/dmsans"
         android:lineSpacingMultiplier="0.85"
-        android:text="Classic chocolate brownies"
+        android:text="Delightful cookies"
         android:textColor="#5e89a5"
         android:textSize="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.08"
+        app:layout_constraintHorizontal_bias="0.065"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.191" />
+        app:layout_constraintVertical_bias="0.2" />
 
     <TextView
         android:id="@+id/detailsTitle"
@@ -66,23 +66,23 @@
         android:textSize="19dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.116"
+        app:layout_constraintHorizontal_bias="0.114"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.597" />
 
     <TextView
         android:id="@+id/details"
-        android:layout_width="266dp"
+        android:layout_width="320dp"
         android:layout_height="wrap_content"
         android:fontFamily="@font/dmsans"
         android:lineSpacingMultiplier="0.7"
-        android:text="Made with dark chocolate compound that brings out a rich fudgy flavor"
+        android:text="Chewy and moist chocolate chip sugar cookies perfect for a sweet tooth like you"
         android:textColor="#0f4162"
         android:textSize="14dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.275"
+        app:layout_constraintHorizontal_bias="0.428"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.646" />
@@ -140,30 +140,30 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/dmsansmedium"
-        android:text="3 pieces"
+        android:text="1 piece"
         android:textColor="@color/white"
         android:textSize="17dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.345"
+        app:layout_constraintHorizontal_bias="0.331"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.783" />
+        app:layout_constraintVertical_bias="0.781" />
 
     <TextView
         android:id="@+id/pcs9"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/dmsansmedium"
-        android:text="9 pieces"
+        android:text="5 pieces"
         android:textColor="@color/white"
         android:textSize="17dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.345"
+        app:layout_constraintHorizontal_bias="0.347"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.823" />
+        app:layout_constraintVertical_bias="0.821" />
 
     <TextView
         android:id="@+id/price1"
@@ -185,7 +185,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/dmsansmedium"
-        android:text="P 140"
+        android:text="P 220"
         android:textColor="@color/white"
         android:textSize="17dp"
         app:layout_constraintBottom_toBottomOf="parent"

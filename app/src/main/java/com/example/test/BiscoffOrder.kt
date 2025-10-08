@@ -1,31 +1,32 @@
 package com.example.test
 
 import android.os.Bundle
-import android.widget.*
+import android.widget.Button
+import android.widget.ImageButton
+import android.widget.RadioButton
+import android.widget.TextView
+import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 
-class BrowniesOrder : AppCompatActivity() {
 
+class BiscoffOrder : AppCompatActivity() {
     private var quantity = 1
     private var selectedPack = 3
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
-        setContentView(R.layout.activity_brownies_order)
-
+        setContentView(R.layout.activity_biscoff_order)
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
-
         val btnMinus = findViewById<ImageButton>(R.id.minusButton)
         val btnPlus = findViewById<ImageButton>(R.id.addButton)
-        val qtyTextView = findViewById<TextView>(R.id.orderCount)
+        val qtyTextView = findViewById<TextView>(R.id.orderCount)   // renamed to avoid shadowing
         val choice1 = findViewById<RadioButton>(R.id.choice1)
         val choice2 = findViewById<RadioButton>(R.id.choice2)
         val btnAddToCart = findViewById<Button>(R.id.addToCartBtn)
