@@ -153,24 +153,63 @@
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.191"
+        app:layout_constraintHorizontal_bias="0.210"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.812">
+        app:layout_constraintVertical_bias="0.820"
+        android:paddingVertical="5dp">
 
-        <RadioButton
+        <androidx.appcompat.widget.AppCompatRadioButton
             android:id="@+id/choice1"
-            android:layout_width="match_parent"
-            android:layout_height="31dp"
-            android:buttonTint="@color/white"
-            android:text="3 Pieces" />
+            android:layout_width="26dp"
+            android:layout_height="25dp"
+            android:background="@drawable/btn_radiobtn"
+            android:button="@null"
+            android:buttonTint="@null"
+            android:paddingHorizontal="5dp"
+            android:textColor="@color/white"
+            android:layout_marginBottom="10dp"/>
 
-        <RadioButton
+        <androidx.appcompat.widget.AppCompatRadioButton
             android:id="@+id/choice2"
-            android:layout_width="match_parent"
-            android:layout_height="30dp"
-            android:text="9 Pieces" />
+            android:layout_width="26dp"
+            android:layout_height="25dp"
+            android:background="@drawable/btn_radiobtn"
+            android:button="@null"
+            android:buttonTint="@null"
+            android:paddingHorizontal="5dp"
+            android:textColor="@color/white"  />
     </RadioGroup>
+
+    <TextView
+        android:id="@+id/pcs3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/dmsansmedium"
+        android:text="3 pieces"
+        android:textColor="@color/white"
+        android:textSize="17dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.345"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.783" />
+
+    <TextView
+        android:id="@+id/pcs9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/dmsansmedium"
+        android:text="9 pieces"
+        android:textColor="@color/white"
+        android:textSize="17dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.345"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.823" />
 
     <Button
         android:id="@+id/addToCartBtn"
