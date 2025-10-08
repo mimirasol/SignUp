@@ -12,6 +12,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Test">
         <activity
+            android:name=".Market"
+            android:exported="false" />
+        <activity
             android:name=".TeamPage"
             android:exported="false" />
         <activity
@@ -20,7 +23,7 @@
         <activity android:name=".LogIn" />
         <activity
             android:name=".homepage"
-            android:exported="false"/>
+            android:exported="false" />
         <activity
             android:name=".SignUp"
             android:exported="true">
