@@ -9,6 +9,7 @@
     tools:context=".Market">
 
     <!--Return to home button -->
+    <!--Make sure these are consistent throughout the pages-->
     <FrameLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -16,7 +17,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0.08"
+        app:layout_constraintHorizontal_bias="0.05"
         app:layout_constraintVertical_bias="0.033">
 
         <Button
@@ -112,7 +113,7 @@
         android:layout_height="wrap_content"
         android:fontFamily="@font/dmsansmedium"
         android:paddingLeft="4dp"
-        android:text="indulge in out sweet treats!"
+        android:text="indulge in our sweet treats"
         android:textColor="@color/blue"
         android:textSize="20sp"
         android:textStyle="bold"
