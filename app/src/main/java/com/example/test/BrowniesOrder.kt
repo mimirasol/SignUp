@@ -34,8 +34,15 @@ class BrowniesOrder : AppCompatActivity() {
         choice1.isChecked = true
 
         btnPlus.setOnClickListener {
-            quantity++
-            qtyTextView.text = quantity.toString()
+            if (quantity < 10) {
+                quantity++
+                qtyTextView.text = quantity.toString()
+            }
+            else {
+                val message = "Max order quantity is 10!"
+                Toast.makeText(this, message, Toast.LENGTH_SHORT).show()
+            }
+
         }
 
         btnMinus.setOnClickListener {
@@ -44,9 +51,10 @@ class BrowniesOrder : AppCompatActivity() {
                 qtyTextView.text = quantity.toString()
             }
             else if (quantity < 1) {
-                val message = "Amount unable to go below 1"
+                val message = "Amount unable to go below 1!"
                 Toast.makeText(this, message, Toast.LENGTH_SHORT).show()
             }
+
         }
 
         choice1.setOnCheckedChangeListener { _, isChecked ->
