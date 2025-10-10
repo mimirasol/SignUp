@@ -2,8 +2,10 @@ package com.example.test
 
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import android.widget.Button
 import android.widget.LinearLayout
+import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -83,6 +85,8 @@ class Market : AppCompatActivity() {
         }
 
         cartPage.putExtra("orderList", ordersVector)
+        Log.d("MarketDebug", "Orders count: ${ordersVector.size}")
+        Toast.makeText(this, "Orders: ${ordersVector.size}", Toast.LENGTH_SHORT).show()
 
         val homepageButton = findViewById<Button>(R.id.return_dashboard)
         val cartButton = findViewById<Button>(R.id.btnCart)

@@ -144,7 +144,7 @@
         android:id="@+id/button"
         android:layout_width="306dp"
         android:layout_height="56dp"
-        android:background="@drawable/dashboard_bg"
+        android:background="@drawable/bg_dashboard"
         android:fontFamily="@font/poppins_bold"
         android:text="Finish Order"
         android:textColor="@color/darkblue"
@@ -169,6 +169,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.040"
-        app:srcCompat="@drawable/team_page_back_button" />
+        app:srcCompat="@drawable/btn_team_page_back_button" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
