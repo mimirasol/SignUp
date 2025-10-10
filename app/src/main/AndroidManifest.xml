@@ -23,7 +23,7 @@
         <activity
             android:name=".Gallery"
             android:exported="false" />
-        <activity android:name=".LogIn" />
+        <activity android:name=".LogIn"/>
         <activity
             android:name=".BrowniesOrder"
             android:exported="false" />
@@ -48,6 +48,12 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".BrookiesOrder"
+            android:exported="false"/>
+        <activity
+            android:name=".BrowniesOrder"
+            android:exported="false"/>
         <activity
             android:name=".CookiesOrder"
             android:exported="false" />
