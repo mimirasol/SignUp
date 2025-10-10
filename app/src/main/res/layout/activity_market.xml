@@ -110,12 +110,14 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <!-- Subtitle -->
+
+    <!--Main Layout for store items-->
     <TextView
         android:id="@+id/tvSubtitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="40dp"
-        android:layout_marginTop="4dp"
+        android:layout_marginTop="-8dp"
         android:fontFamily="@font/dmsansmedium"
         android:paddingLeft="4dp"
         android:text="indulge in our sweet treats"
@@ -125,7 +127,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/tvTitle" />
 
-    <!--Main Layout for store items-->
     <GridLayout
         android:id="@+id/marketGrid"
         android:layout_width="330dp"
