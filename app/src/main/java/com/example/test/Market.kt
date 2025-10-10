@@ -1,6 +1,8 @@
 package com.example.test
 
+import android.content.Intent
 import android.os.Bundle
+import android.widget.Button
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -12,8 +14,9 @@ class Market : AppCompatActivity() {
         val name: String?,
         val qty: Int,
         val pack: Int,
-        val price: Double
-    )
+        val price: Double,
+        val img: String
+    ) : java.io.Serializable
     val ordersVector = Vector<Order>()
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -25,6 +28,8 @@ class Market : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
+
+        val cartPage = Intent(this, Cart::class.java)
 
         //gets the orders and puts it inside ordersVector
         val classicBundle = intent.getBundleExtra("classicBundle")
@@ -38,7 +43,7 @@ class Market : AppCompatActivity() {
             val pack = classicBundle.getInt("pack")
             val price = classicBundle.getDouble("price")
 
-            val classicOrder = Order(name, qty, pack, price)
+            val classicOrder = Order(name, qty, pack, price, "img_brownies")
 
             ordersVector.add(classicOrder)
         }
@@ -49,7 +54,7 @@ class Market : AppCompatActivity() {
             val pack = brookiesBundle.getInt("pack")
             val price = brookiesBundle.getDouble("price")
 
-            val brookiesOrder = Order(name, qty, pack, price)
+            val brookiesOrder = Order(name, qty, pack, price, "img_brookies")
 
             ordersVector.add(brookiesOrder)
         }
@@ -60,7 +65,7 @@ class Market : AppCompatActivity() {
             val pack = biscoffBundle.getInt("pack")
             val price = biscoffBundle.getDouble("price")
 
-            val biscoffOrder = Order(name, qty, pack, price)
+            val biscoffOrder = Order(name, qty, pack, price, "img_biscoff")
 
             ordersVector.add(biscoffOrder)
         }
@@ -71,9 +76,25 @@ class Market : AppCompatActivity() {
             val pack = cookiesBundle.getInt("pack")
             val price = cookiesBundle.getDouble("price")
 
-            val cookiesOrder = Order(name, qty, pack, price)
+            val cookiesOrder = Order(name, qty, pack, price, "img_cookies")
 
             ordersVector.add(cookiesOrder)
+        }
+
+        cartPage.putExtra("orderList", ordersVector)
+        startActivity(cartPage)
+
+        val homepageButton = findViewById<Button>(R.id.return_dashboard)
+        val cartButton = findViewById<Button>(R.id.btnCart)
+
+        homepageButton.setOnClickListener {
+            val homepageButton = Intent(this, homepage::class.java)
+            startActivity(homepageButton)
+        }
+
+        cartButton.setOnClickListener {
+            val cartButton = Intent(this, Cart::class.java)
+            startActivity(cartButton)
         }
     }
 }

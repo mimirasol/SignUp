@@ -25,6 +25,7 @@ class homepage : AppCompatActivity() {
 
         val logoutButton = findViewById<Button>(R.id.logoutBtn)
         val galleryButton = findViewById<Button>(R.id.Gallerybtn)
+        val marketButton = findViewById<Button>(R.id.Marketbtn)
 
         logoutButton.setOnClickListener {
             Toast.makeText(this, "Logging Out...", Toast.LENGTH_LONG).show()
@@ -36,6 +37,11 @@ class homepage : AppCompatActivity() {
         galleryButton.setOnClickListener {
             val galleryButton = Intent(this, Gallery::class.java)
             startActivity(galleryButton)
+        }
+
+        marketButton.setOnClickListener {
+            val marketButton = Intent(this, Market::class.java)
+            startActivity(marketButton)
         }
 
         val toggle = findViewById<ToggleButton>(R.id.themeBtn)

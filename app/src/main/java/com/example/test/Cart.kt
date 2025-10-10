@@ -3,18 +3,23 @@ package com.example.test
 import android.os.Bundle
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 
 class Cart : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContentView(R.layout.activity_cart)
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
-            val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
-            insets
+
+        // Receive the vector from Market
+        val ordersVector = intent.getSerializableExtra("ordersList") as? java.util.Vector<Market.Order>
+
+        val recyclerView = findViewById<RecyclerView>(R.id.recyclerCart)
+        recyclerView.layoutManager = LinearLayoutManager(this)
+
+        if (ordersVector != null) {
+            recyclerView.adapter = OrderAdapter(this, ordersVector.toList())
         }
     }
 }
