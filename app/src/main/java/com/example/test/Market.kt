@@ -1,5 +1,7 @@
 package com.example.test
 
+import com.example.test.OrderManager
+
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log
@@ -20,7 +22,6 @@ class Market : AppCompatActivity() {
         val price: Double,
         val img: String
     ) : java.io.Serializable
-    val ordersVector = Vector<Order>()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -48,7 +49,7 @@ class Market : AppCompatActivity() {
 
             val classicOrder = Order(name, qty, pack, price, "img_brownies")
 
-            ordersVector.add(classicOrder)
+            OrderManager.orders.add(classicOrder)
         }
 
         if (brookiesBundle != null) {
@@ -59,7 +60,7 @@ class Market : AppCompatActivity() {
 
             val brookiesOrder = Order(name, qty, pack, price, "img_brookies")
 
-            ordersVector.add(brookiesOrder)
+            OrderManager.orders.add(brookiesOrder)
         }
 
         if (biscoffBundle != null) {
@@ -70,7 +71,7 @@ class Market : AppCompatActivity() {
 
             val biscoffOrder = Order(name, qty, pack, price, "img_biscoff")
 
-            ordersVector.add(biscoffOrder)
+            OrderManager.orders.add(biscoffOrder)
         }
 
         if (cookiesBundle != null) {
@@ -81,12 +82,12 @@ class Market : AppCompatActivity() {
 
             val cookiesOrder = Order(name, qty, pack, price, "img_cookies")
 
-            ordersVector.add(cookiesOrder)
+            OrderManager.orders.add(cookiesOrder)
         }
 
-        cartPage.putExtra("orderList", ordersVector)
-        Log.d("MarketDebug", "Orders count: ${ordersVector.size}")
-        Toast.makeText(this, "Orders: ${ordersVector.size}", Toast.LENGTH_SHORT).show()
+        cartPage.putExtra("orderList", ArrayList(OrderManager.orders))
+        Log.d("MarketDebug", "Orders count: ${OrderManager.orders.size}")
+        Toast.makeText(this, "Orders: ${OrderManager.orders.size}", Toast.LENGTH_SHORT).show()
 
         val homepageButton = findViewById<Button>(R.id.return_dashboard)
         val cartButton = findViewById<Button>(R.id.btnCart)

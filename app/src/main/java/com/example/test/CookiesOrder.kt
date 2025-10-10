@@ -82,8 +82,6 @@ class CookiesOrder : AppCompatActivity() {
             Toast.makeText(this, message, Toast.LENGTH_SHORT).show()
 
             val initialPrice = quantity * selectedPrice
-            Toast.makeText(this, "$initialPrice", Toast.LENGTH_SHORT).show()
-
             val productName = "Choco Chip Cookies"
             val marketPage = Intent(this, Market::class.java)
 
@@ -95,6 +93,7 @@ class CookiesOrder : AppCompatActivity() {
             }
 
             marketPage.putExtra("cookiesBundle", cookiesBundle)
+            startActivity(marketPage)
         }
     }
 }

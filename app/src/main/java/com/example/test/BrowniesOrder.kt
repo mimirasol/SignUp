@@ -83,8 +83,6 @@ class BrowniesOrder : AppCompatActivity() {
             Toast.makeText(this, message, Toast.LENGTH_SHORT).show()
 
             val initialPrice = quantity * selectedPrice
-            Toast.makeText(this, "$initialPrice", Toast.LENGTH_SHORT).show()
-
             val productName = "Classic Brownies"
             val marketPage = Intent(this, Market::class.java)
 
@@ -96,6 +94,7 @@ class BrowniesOrder : AppCompatActivity() {
             }
 
             marketPage.putExtra("classicBundle", classicBundle)
+            startActivity(marketPage)
         }
     }
 }

@@ -40,10 +40,10 @@
             android:name=".BrookiesOrder"
             android:exported="false" />
         <activity
-            android:name=".Market"
+            android:name=".SignUp"
             android:exported="false" />
         <activity
-            android:name=".SignUp"
+            android:name=".Market"
             android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
