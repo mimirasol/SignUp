@@ -142,12 +142,15 @@
 
         <!-- Dish 1: Classic Brownies -->
         <LinearLayout
+            android:id="@+id/item_brownies"
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:layout_columnWeight="1"
             android:layout_rowWeight="1"
             android:layout_margin="5dp"
+            android:focusable="true"
             android:orientation="vertical"
+            android:clickable="true"
             android:background="@drawable/rounded_bg"
             android:padding="10dp"
             android:gravity="center_horizontal">
@@ -188,7 +191,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="8dp"
-                    android:text="⭐4.3"
+                    android:text="⭐5.0"
                     android:textColor="@color/blue"
                     android:textSize="14sp"
                     android:fontFamily="@font/dmsansmedium" />
@@ -197,12 +200,15 @@
 
         <!-- Dish 2: Brookies -->
         <LinearLayout
+            android:id="@+id/item_brookies"
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:layout_columnWeight="1"
             android:layout_rowWeight="1"
             android:layout_margin="5dp"
+            android:focusable="true"
             android:orientation="vertical"
+            android:clickable="true"
             android:background="@drawable/rounded_bg"
             android:padding="10dp"
             android:gravity="center_horizontal">
@@ -234,7 +240,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="₱250"
+                    android:text="₱50-155"
                     android:textColor="@color/darkblue"
                     android:textSize="14sp"
                     android:fontFamily="@font/poppins_bold" />
@@ -243,21 +249,25 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="8dp"
-                    android:text="⭐4.7"
+                    android:fontFamily="@font/dmsansmedium"
+                    android:text="⭐4.8"
                     android:textColor="@color/blue"
-                    android:textSize="14sp"
-                    android:fontFamily="@font/dmsansmedium" />
+                    android:textSize="14sp" />
+
             </LinearLayout>
         </LinearLayout>
 
         <!-- Dish 3: Biscoff -->
         <LinearLayout
+            android:id="@+id/item_biscoff"
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:layout_columnWeight="1"
             android:layout_rowWeight="1"
             android:layout_margin="5dp"
+            android:focusable="true"
             android:orientation="vertical"
+            android:clickable="true"
             android:background="@drawable/rounded_bg"
             android:padding="10dp"
             android:gravity="center_horizontal">
@@ -289,7 +299,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="₱60"
+                    android:text="₱70-205"
                     android:textColor="@color/darkblue"
                     android:textSize="14sp"
                     android:fontFamily="@font/poppins_bold" />
@@ -298,7 +308,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="8dp"
-                    android:text="⭐4.5"
+                    android:text="⭐4.6"
                     android:textColor="@color/blue"
                     android:textSize="14sp"
                     android:fontFamily="@font/dmsansmedium" />
@@ -307,12 +317,15 @@
 
         <!-- Dish 4: Choco Chip Cookies -->
         <LinearLayout
+            android:id="@+id/item_cookies"
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:layout_columnWeight="1"
             android:layout_rowWeight="1"
             android:layout_margin="5dp"
             android:orientation="vertical"
+            android:clickable="true"
+            android:focusable="true"
             android:background="@drawable/rounded_bg"
             android:padding="10dp"
             android:gravity="center_horizontal">
@@ -344,7 +357,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="₱35"
+                    android:text="₱45-220"
                     android:textColor="@color/darkblue"
                     android:textSize="14sp"
                     android:fontFamily="@font/poppins_bold" />
@@ -353,12 +366,13 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="8dp"
-                    android:text="⭐4.1"
+                    android:text="⭐4.7"
                     android:textColor="@color/blue"
                     android:textSize="14sp"
                     android:fontFamily="@font/dmsansmedium" />
             </LinearLayout>
         </LinearLayout>
+
     </GridLayout>
 
     <Button

@@ -3,6 +3,7 @@ package com.example.test
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
+import android.widget.LinearLayout
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -94,6 +95,37 @@ class Market : AppCompatActivity() {
         cartButton.setOnClickListener {
             val cartButton = Intent(this, Cart::class.java)
             startActivity(cartButton)
+        }
+
+        //Transferring to pages of respective items
+        //Variable declarations
+        val browniesTransfer = findViewById<LinearLayout>(R.id.item_brownies)
+        val brookiesTransfer = findViewById<LinearLayout>(R.id.item_brookies)
+        val biscoffTransfer = findViewById<LinearLayout>(R.id.item_biscoff)
+        val cookiesTransfer = findViewById<LinearLayout>(R.id.item_cookies)
+
+        // brownies
+        browniesTransfer.setOnClickListener {
+            val browniesTransfer = Intent(this, BrowniesOrder::class.java)
+            startActivity(browniesTransfer)
+        }
+
+        // brookies
+        brookiesTransfer.setOnClickListener {
+            val brookiesTransfer = Intent(this, BrookiesOrder::class.java)
+            startActivity(brookiesTransfer)
+        }
+
+        // biscoff
+        biscoffTransfer.setOnClickListener {
+            val biscoffTransfer = Intent(this, BiscoffOrder::class.java)
+            startActivity(biscoffTransfer)
+        }
+
+        // cookies
+        cookiesTransfer.setOnClickListener {
+            val cookiesTransfer = Intent(this, CookiesOrder::class.java)
+            startActivity(cookiesTransfer)
         }
     }
 }

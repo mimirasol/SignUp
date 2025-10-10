@@ -37,10 +37,10 @@
             android:name=".BrookiesOrder"
             android:exported="false" />
         <activity
-            android:name=".Market"
+            android:name=".SignUp"
             android:exported="false" />
         <activity
-            android:name=".SignUp"
+            android:name=".Market"
             android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -48,12 +48,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name=".BrookiesOrder"
-            android:exported="false"/>
-        <activity
-            android:name=".BrowniesOrder"
-            android:exported="false"/>
         <activity
             android:name=".CookiesOrder"
             android:exported="false" />
