@@ -31,6 +31,7 @@ class homepage : AppCompatActivity() {
             Toast.makeText(this, "Logging Out...", Toast.LENGTH_LONG).show()
 
             val loginPage = Intent(this, LogIn::class.java)
+            OrderManager.orders.clear() // clears the order list
             startActivity(loginPage)
         }
 

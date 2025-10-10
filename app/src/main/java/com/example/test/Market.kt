@@ -1,7 +1,5 @@
 package com.example.test
 
-import com.example.test.OrderManager
-
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log
