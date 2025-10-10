@@ -25,6 +25,8 @@
             android:name=".homepage"
             android:exported="false" />
         <activity
+            android:name=".Market"
+        <activity
             android:name=".BrowniesOrder"
             android:exported="false"/>
         <activity
