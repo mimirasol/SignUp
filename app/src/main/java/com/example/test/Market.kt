@@ -15,7 +15,7 @@ import java.util.Vector
 class Market : AppCompatActivity() {
     data class Order(
         val name: String?,
-        val qty: Int,
+        var qty: Int,
         val pack: Int,
         val price: Double,
         val img: String
@@ -41,7 +41,7 @@ class Market : AppCompatActivity() {
 
         if (classicBundle != null) {
             val name = classicBundle.getString("name")
-            val qty = classicBundle.getInt("qty")
+            var qty = classicBundle.getInt("qty")
             val pack = classicBundle.getInt("pack")
             val price = classicBundle.getDouble("price")
 
@@ -52,7 +52,7 @@ class Market : AppCompatActivity() {
 
         if (brookiesBundle != null) {
             val name = brookiesBundle.getString("name")
-            val qty = brookiesBundle.getInt("qty")
+            var qty = brookiesBundle.getInt("qty")
             val pack = brookiesBundle.getInt("pack")
             val price = brookiesBundle.getDouble("price")
 
@@ -63,7 +63,7 @@ class Market : AppCompatActivity() {
 
         if (biscoffBundle != null) {
             val name = biscoffBundle.getString("name")
-            val qty = biscoffBundle.getInt("qty")
+            var qty = biscoffBundle.getInt("qty")
             val pack = biscoffBundle.getInt("pack")
             val price = biscoffBundle.getDouble("price")
 
@@ -74,7 +74,7 @@ class Market : AppCompatActivity() {
 
         if (cookiesBundle != null) {
             val name = cookiesBundle.getString("name")
-            val qty = cookiesBundle.getInt("qty")
+            var qty = cookiesBundle.getInt("qty")
             val pack = cookiesBundle.getInt("pack")
             val price = cookiesBundle.getDouble("price")
 

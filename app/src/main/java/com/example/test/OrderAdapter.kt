@@ -1,6 +1,5 @@
 package com.example.test
 
-import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -9,20 +8,17 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 
-class OrderAdapter(
-    private val context: Context,
-    private val orders: List<Market.Order>
-) : RecyclerView.Adapter<OrderAdapter.OrderViewHolder>() {
+class OrderAdapter(private val orders: MutableList<Market.Order>) :
+    RecyclerView.Adapter<OrderAdapter.OrderViewHolder>() {
 
-    class OrderViewHolder(view: View) : RecyclerView.ViewHolder(view) {
-        val itemImg: ImageView = view.findViewById(R.id.itemImg)
-        val itemName: TextView = view.findViewById(R.id.itemName)
-        val itemPack: TextView = view.findViewById(R.id.itemPack)
-        val itemPrice: TextView = view.findViewById(R.id.itemPrice)
-        val itemQty: TextView = view.findViewById(R.id.itemQty)
-        val addBtn: ImageButton = view.findViewById(R.id.addBtn)
-        val minusBtn: ImageButton = view.findViewById(R.id.minusBtn)
-        val deleteBtn: ImageButton = view.findViewById(R.id.deleteBtn)
+    class OrderViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+        val itemName: TextView = itemView.findViewById(R.id.itemName)
+        var itemQty: TextView = itemView.findViewById(R.id.itemQty)
+        val itemPrice: TextView = itemView.findViewById(R.id.itemPrice)
+        val itemImg: ImageView = itemView.findViewById(R.id.itemImg)
+        val addBtn: ImageButton = itemView.findViewById(R.id.addBtn)
+        val minusBtn: ImageButton = itemView.findViewById(R.id.minusBtn)
+        val deleteBtn: ImageButton = itemView.findViewById(R.id.deleteBtn)
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): OrderViewHolder {
@@ -35,27 +31,32 @@ class OrderAdapter(
         val order = orders[position]
 
         holder.itemName.text = order.name
-        holder.itemPack.text = "${order.pack} pcs"
+        holder.itemQty.text = "${order.qty}"
         holder.itemPrice.text = "₱${order.price}"
-        holder.itemQty.text = order.qty.toString()
 
-        // Dynamically set image from drawable using its name
-        val resId = context.resources.getIdentifier(order.img, "drawable", context.packageName)
-        if (resId != 0) {
-            holder.itemImg.setImageResource(resId)
-        } else {
-            holder.itemImg.setImageResource(R.drawable.ic_launcher_background) // fallback
-        }
+        val resId = holder.itemView.context.resources.getIdentifier(
+            order.img, "drawable", holder.itemView.context.packageName
+        )
+        holder.itemImg.setImageResource(resId)
 
-        // Optional: set up button clicks here
         holder.addBtn.setOnClickListener {
-            // logic for add
+            order.qty += 1
+            holder.itemQty.text = "${order.qty}"
         }
+
+        // Minus button
         holder.minusBtn.setOnClickListener {
-            // logic for minus
+            if (order.qty > 1) {
+                order.qty -= 1
+                holder.itemQty.text = "${order.qty}"
+            }
         }
+
+        // Delete button
         holder.deleteBtn.setOnClickListener {
-            // logic for delete
+            orders.removeAt(position)
+            notifyItemRemoved(position)
+            notifyItemRangeChanged(position, orders.size)
         }
     }
 

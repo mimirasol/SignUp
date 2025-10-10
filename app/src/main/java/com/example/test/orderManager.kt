@@ -3,5 +3,5 @@ package com.example.test
 import java.util.Vector
 
 object OrderManager {
-    val orders = Vector<Market.Order>()
+    val orders = mutableListOf<Market.Order>()
 }
