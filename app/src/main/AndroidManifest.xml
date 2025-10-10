@@ -20,18 +20,12 @@
         <activity
             android:name=".Gallery"
             android:exported="false" />
-        <activity android:name=".LogIn" />
+        <activity android:name=".LogIn"/>
         <activity
             android:name=".homepage"
             android:exported="false" />
         <activity
             android:name=".BiscoffOrder"
-            android:exported="false"/>
-        <activity
-            android:name=".BrookiesOrder"
-            android:exported="true"/>
-        <activity
-            android:name=".BrowniesOrder"
             android:exported="true">
         <intent-filter>
             <action android:name="android.intent.action.MAIN" />
@@ -39,6 +33,12 @@
             <category android:name="android.intent.category.LAUNCHER" />
         </intent-filter>
     </activity>
+        <activity
+            android:name=".BrookiesOrder"
+            android:exported="false"/>
+        <activity
+            android:name=".BrowniesOrder"
+            android:exported="false"/>
         <activity
             android:name=".CookiesOrder"
             android:exported="true"/>
