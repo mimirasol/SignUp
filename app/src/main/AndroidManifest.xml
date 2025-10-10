@@ -26,17 +26,32 @@
             android:exported="false" />
         <activity
             android:name=".Market"
+        <activity
+            android:name=".BrowniesOrder"
+            android:exported="false"/>
+        <activity
+            android:name=".BrookiesOrder"
+            android:exported="true"/>
+        <activity
+            android:name=".BiscoffOrder"
             android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+        <intent-filter>
+            <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+            <category android:name="android.intent.category.LAUNCHER" />
+        </intent-filter>
+    </activity>
+        <activity
+            android:name=".CookiesOrder"
+            android:exported="true"/>
         <activity android:name=".NathanDescription" />
         <activity android:name=".JepDescription" />
         <activity android:name=".SamDescription" />
         <activity android:name=".MiraDescription" />
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
     </application>
 
 </manifest>
