@@ -1,5 +1,6 @@
 package com.example.test
 
+import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import android.widget.ImageButton
@@ -14,6 +15,7 @@ import androidx.core.view.WindowInsetsCompat
 class CookiesOrder : AppCompatActivity() {
     private var quantity = 1
     private var selectedPack = 1
+    private var selectedPrice = 45.00
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
@@ -29,6 +31,12 @@ class CookiesOrder : AppCompatActivity() {
         val choice1 = findViewById<RadioButton>(R.id.choice1)
         val choice2 = findViewById<RadioButton>(R.id.choice2)
         val btnAddToCart = findViewById<Button>(R.id.addToCartBtn)
+        val btnBack = findViewById<ImageButton>(R.id.backButton)
+
+        btnBack.setOnClickListener {
+            val marketPage = Intent(this, Market::class.java)
+            startActivity(marketPage)
+        }
 
         qtyTextView.text = quantity.toString()
         choice1.isChecked = true
@@ -59,10 +67,12 @@ class CookiesOrder : AppCompatActivity() {
 
         choice1.setOnCheckedChangeListener { _, isChecked ->
             if (isChecked) selectedPack = 1
+                           selectedPrice = 45.00
         }
 
         choice2.setOnCheckedChangeListener { _, isChecked ->
             if (isChecked) selectedPack = 5
+                           selectedPrice = 220.00
         }
 
 
@@ -70,6 +80,21 @@ class CookiesOrder : AppCompatActivity() {
             //Placeholder muna pangcheck kung nakaorder yung user
             val message = "Added $quantity pack(s) of $selectedPack-piece brownies to cart!"
             Toast.makeText(this, message, Toast.LENGTH_SHORT).show()
+
+            val initialPrice = quantity * selectedPrice
+            Toast.makeText(this, "$initialPrice", Toast.LENGTH_SHORT).show()
+
+            val productName = "Choco Chip Cookies"
+            val marketPage = Intent(this, Market::class.java)
+
+            val cookiesBundle = Bundle().apply {
+                putString("name", productName)
+                putInt("qty", quantity)
+                putInt("pack", selectedPack)
+                putDouble("price", initialPrice)
+            }
+
+            marketPage.putExtra("cookiesBundle", cookiesBundle)
         }
     }
 }

@@ -1,5 +1,6 @@
 package com.example.test
 
+import android.content.Intent
 import android.os.Bundle
 import android.widget.*
 import androidx.activity.enableEdgeToEdge
@@ -11,6 +12,7 @@ class BrowniesOrder : AppCompatActivity() {
 
     private var quantity = 1
     private var selectedPack = 3
+    private var selectedPrice = 45.00
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -29,6 +31,12 @@ class BrowniesOrder : AppCompatActivity() {
         val choice1 = findViewById<RadioButton>(R.id.choice1)
         val choice2 = findViewById<RadioButton>(R.id.choice2)
         val btnAddToCart = findViewById<Button>(R.id.addToCartBtn)
+        val btnBack = findViewById<ImageButton>(R.id.backButton)
+
+        btnBack.setOnClickListener {
+            val marketPage = Intent(this, Market::class.java)
+            startActivity(marketPage)
+        }
 
         qtyTextView.text = quantity.toString()
         choice1.isChecked = true
@@ -59,10 +67,13 @@ class BrowniesOrder : AppCompatActivity() {
 
         choice1.setOnCheckedChangeListener { _, isChecked ->
             if (isChecked) selectedPack = 3
+                           selectedPrice = 45.00
+
         }
 
         choice2.setOnCheckedChangeListener { _, isChecked ->
             if (isChecked) selectedPack = 9
+                           selectedPrice = 140.00
         }
 
 
@@ -70,6 +81,21 @@ class BrowniesOrder : AppCompatActivity() {
             //Placeholder muna pangcheck kung nakaorder yung user
             val message = "Added $quantity pack(s) of $selectedPack-piece brownies to cart!"
             Toast.makeText(this, message, Toast.LENGTH_SHORT).show()
+
+            val initialPrice = quantity * selectedPrice
+            Toast.makeText(this, "$initialPrice", Toast.LENGTH_SHORT).show()
+
+            val productName = "Classic Brownies"
+            val marketPage = Intent(this, Market::class.java)
+
+            val classicBundle = Bundle().apply {
+                putString("name", productName)
+                putInt("qty", quantity)
+                putInt("pack", selectedPack)
+                putDouble("price", initialPrice)
+            }
+
+            marketPage.putExtra("classicBundle", classicBundle)
         }
     }
 }

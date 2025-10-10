@@ -25,15 +25,13 @@
             android:name=".homepage"
             android:exported="false" />
         <activity
-            android:name=".Market"
-        <activity
-            android:name=".BrowniesOrder"
+            android:name=".BiscoffOrder"
             android:exported="false"/>
         <activity
             android:name=".BrookiesOrder"
             android:exported="true"/>
         <activity
-            android:name=".BiscoffOrder"
+            android:name=".BrowniesOrder"
             android:exported="true">
         <intent-filter>
             <action android:name="android.intent.action.MAIN" />
