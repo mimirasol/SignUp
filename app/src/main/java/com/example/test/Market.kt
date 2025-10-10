@@ -82,7 +82,6 @@ class Market : AppCompatActivity() {
         }
 
         cartPage.putExtra("orderList", ordersVector)
-        startActivity(cartPage)
 
         val homepageButton = findViewById<Button>(R.id.return_dashboard)
         val cartButton = findViewById<Button>(R.id.btnCart)
