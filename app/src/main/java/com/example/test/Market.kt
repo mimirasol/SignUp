@@ -17,9 +17,12 @@ class Market : AppCompatActivity() {
         val name: String?,
         var qty: Int,
         val pack: Int,
-        val price: Double,
+        val unitPrice: Double,
         val img: String
-    ) : java.io.Serializable
+    ) : java.io.Serializable {
+        val price: Double
+            get() = qty * unitPrice
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -43,9 +46,9 @@ class Market : AppCompatActivity() {
             val name = classicBundle.getString("name")
             var qty = classicBundle.getInt("qty")
             val pack = classicBundle.getInt("pack")
-            val price = classicBundle.getDouble("price")
+            val unitPrice = classicBundle.getDouble("unitPrice")
 
-            val classicOrder = Order(name, qty, pack, price, "img_brownies")
+            val classicOrder = Order(name, qty, pack, unitPrice, "img_brownies")
 
             OrderManager.orders.add(classicOrder)
         }
@@ -54,9 +57,9 @@ class Market : AppCompatActivity() {
             val name = brookiesBundle.getString("name")
             var qty = brookiesBundle.getInt("qty")
             val pack = brookiesBundle.getInt("pack")
-            val price = brookiesBundle.getDouble("price")
+            val unitPrice = brookiesBundle.getDouble("unitPrice")
 
-            val brookiesOrder = Order(name, qty, pack, price, "img_brookies")
+            val brookiesOrder = Order(name, qty, pack, unitPrice, "img_brookies")
 
             OrderManager.orders.add(brookiesOrder)
         }
@@ -65,9 +68,9 @@ class Market : AppCompatActivity() {
             val name = biscoffBundle.getString("name")
             var qty = biscoffBundle.getInt("qty")
             val pack = biscoffBundle.getInt("pack")
-            val price = biscoffBundle.getDouble("price")
+            val unitPrice = biscoffBundle.getDouble("unitPrice")
 
-            val biscoffOrder = Order(name, qty, pack, price, "img_biscoff")
+            val biscoffOrder = Order(name, qty, pack, unitPrice, "img_biscoff")
 
             OrderManager.orders.add(biscoffOrder)
         }
@@ -76,9 +79,9 @@ class Market : AppCompatActivity() {
             val name = cookiesBundle.getString("name")
             var qty = cookiesBundle.getInt("qty")
             val pack = cookiesBundle.getInt("pack")
-            val price = cookiesBundle.getDouble("price")
+            val unitPrice = cookiesBundle.getDouble("unitPrice")
 
-            val cookiesOrder = Order(name, qty, pack, price, "img_cookies")
+            val cookiesOrder = Order(name, qty, pack, unitPrice, "img_cookies")
 
             OrderManager.orders.add(cookiesOrder)
         }

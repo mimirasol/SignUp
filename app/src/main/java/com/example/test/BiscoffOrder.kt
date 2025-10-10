@@ -36,8 +36,7 @@ class BiscoffOrder : AppCompatActivity() {
         val btnBack = findViewById<ImageButton>(R.id.backButton)
 
         btnBack.setOnClickListener {
-            val marketPage = Intent(this, Market::class.java)
-            startActivity(marketPage)
+            finish() //go back to market
         }
 
         qtyTextView.text = quantity.toString()
@@ -68,22 +67,24 @@ class BiscoffOrder : AppCompatActivity() {
         }
 
         choice1.setOnCheckedChangeListener { _, isChecked ->
-            if (isChecked) selectedPack = 3
-                           selectedPrice = 70.00
+            if (isChecked) {
+                selectedPack = 3
+                selectedPrice = 70.00
+            }
         }
 
         choice2.setOnCheckedChangeListener { _, isChecked ->
-            if (isChecked) selectedPack = 9
-                           selectedPrice = 205.00
+            if (isChecked) {
+                selectedPack = 9
+                selectedPrice = 205.00
+            }
         }
-
 
         btnAddToCart.setOnClickListener {
             //Placeholder muna pangcheck kung nakaorder yung user
             val message = "Added $quantity pack(s) of $selectedPack-piece brownies to cart!"
             Toast.makeText(this, message, Toast.LENGTH_SHORT).show()
 
-            val initialPrice = quantity * selectedPrice
             val productName = "Biscoff Brownies"
             val marketPage = Intent(this, Market::class.java)
 
@@ -91,10 +92,10 @@ class BiscoffOrder : AppCompatActivity() {
                 putString("name", productName)
                 putInt("qty", quantity)
                 putInt("pack", selectedPack)
-                putDouble("price", initialPrice)
+                putDouble("unitPrice", selectedPrice)
             }
 
-            marketPage.putExtra("BiscoffBundle", biscoffBundle)
+            marketPage.putExtra("brookiesBundle", biscoffBundle)
             startActivity(marketPage)
         }
     }

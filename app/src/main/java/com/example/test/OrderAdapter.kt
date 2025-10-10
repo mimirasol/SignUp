@@ -13,6 +13,7 @@ class OrderAdapter(private val orders: MutableList<Market.Order>) :
 
     class OrderViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val itemName: TextView = itemView.findViewById(R.id.itemName)
+        val itemPack: TextView = itemView.findViewById(R.id.itemPack)
         var itemQty: TextView = itemView.findViewById(R.id.itemQty)
         val itemPrice: TextView = itemView.findViewById(R.id.itemPrice)
         val itemImg: ImageView = itemView.findViewById(R.id.itemImg)
@@ -31,6 +32,7 @@ class OrderAdapter(private val orders: MutableList<Market.Order>) :
         val order = orders[position]
 
         holder.itemName.text = order.name
+        holder.itemPack.text = "${order.qty} Pieces"
         holder.itemQty.text = "${order.qty}"
         holder.itemPrice.text = "₱${order.price}"
 
@@ -42,6 +44,7 @@ class OrderAdapter(private val orders: MutableList<Market.Order>) :
         holder.addBtn.setOnClickListener {
             order.qty += 1
             holder.itemQty.text = "${order.qty}"
+            holder.itemPrice.text = "₱${order.price}"
         }
 
         // Minus button
@@ -49,6 +52,7 @@ class OrderAdapter(private val orders: MutableList<Market.Order>) :
             if (order.qty > 1) {
                 order.qty -= 1
                 holder.itemQty.text = "${order.qty}"
+                holder.itemPrice.text = "₱${order.price}"
             }
         }
 
