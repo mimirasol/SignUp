@@ -55,7 +55,7 @@
         app:backgroundTint="#0f4162"
         app:layout_constraintBottom_toTopOf="@+id/button6"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button4" />
+        app:layout_constraintTop_toBottomOf="@+id/Marketbtn" />
 
     <Button
         android:id="@+id/Gallerybtn"
@@ -70,22 +70,22 @@
         android:textColor="#0f4162"
         android:textSize="30dp"
         app:backgroundTint="@null"
-        app:layout_constraintBottom_toTopOf="@+id/button4"
+        app:layout_constraintBottom_toTopOf="@+id/Marketbtn"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/button4"
+        android:id="@+id/Marketbtn"
         android:layout_width="345dp"
         android:layout_height="119dp"
         android:layout_marginEnd="32dp"
         android:background="@drawable/btn_homepage_buttons"
-        android:backgroundTint="#0f4162"
+        android:backgroundTint="@null"
         android:fontFamily="@font/afacad_bold"
-        android:text="COMING SOON"
-        android:textColor="#ffffff"
-        android:textSize="25dp"
-        app:backgroundTint="#0f4162"
+        android:text="ORDER TREATS"
+        android:textColor="@color/darkblue"
+        android:textSize="30dp"
+        app:backgroundTint="@null"
         app:layout_constraintBottom_toTopOf="@+id/button5"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/Gallerybtn" />
