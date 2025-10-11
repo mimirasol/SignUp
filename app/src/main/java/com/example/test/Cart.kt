@@ -4,18 +4,31 @@ import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.widget.ImageButton
+import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import android.widget.Button
 
 class Cart : AppCompatActivity() {
+
+    private lateinit var subtotalTxt: TextView
+    private lateinit var totalTxt: TextView
+    private val deliveryFee = 40.0
+    private var total = 0.00
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContentView(R.layout.activity_cart)
+
+        subtotalTxt = findViewById(R.id.subtotalPrcTxt)
+        totalTxt = findViewById(R.id.totalPrcTxt)
+
+        updateTotals()
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
@@ -46,5 +59,23 @@ class Cart : AppCompatActivity() {
             val marketButton = Intent(this, Market::class.java)
             startActivity(marketButton)
         }
+
+        val checkOutBtn = findViewById<Button>(R.id.checkoutBtn)
+
+        checkOutBtn.setOnClickListener {
+            updateTotals()
+            val checkOut = Intent(this, CheckOut::class.java)
+
+            checkOut.putExtra("total", total)
+            startActivity(checkOut)
+        }
+    }
+
+    fun updateTotals() {
+        val subtotal = OrderManager.orders.sumOf { it.price }
+        total = subtotal + deliveryFee
+
+        subtotalTxt.text = "₱${"%.2f".format(subtotal)}"
+        totalTxt.text = "₱${"%.2f".format(total)}"
     }
 }

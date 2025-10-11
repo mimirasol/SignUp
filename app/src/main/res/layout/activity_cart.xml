@@ -45,6 +45,45 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
+        android:id="@+id/subtotalPrcTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="644dp"
+        android:layout_marginEnd="40dp"
+        android:fontFamily="@font/dmsansmedium"
+        android:text="PXXX"
+        android:textColor="@color/white"
+        android:textSize="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/devFeePrcTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="688dp"
+        android:layout_marginEnd="40dp"
+        android:fontFamily="@font/dmsansmedium"
+        android:text="₱ 40.00"
+        android:textColor="@color/white"
+        android:textSize="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/totalPrcTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="748dp"
+        android:layout_marginEnd="40dp"
+        android:fontFamily="@font/dmsansmedium"
+        android:text="PXXX"
+        android:textColor="@color/white"
+        android:textSize="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
         android:id="@+id/totalTxt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

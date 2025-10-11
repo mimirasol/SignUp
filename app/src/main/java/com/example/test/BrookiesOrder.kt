@@ -68,13 +68,17 @@ class BrookiesOrder : AppCompatActivity() {
         }
 
         choice1.setOnCheckedChangeListener { _, isChecked ->
-            if (isChecked) selectedPack = 3
-                           selectedPrice = 52.00
+            if (isChecked) {
+                selectedPack = 3
+                selectedPrice = 52.00
+            }
         }
 
         choice2.setOnCheckedChangeListener { _, isChecked ->
-            if (isChecked) selectedPack = 9
-                           selectedPrice = 155.00
+            if (isChecked) {
+                selectedPack = 9
+                selectedPrice = 155.00
+            }
         }
 
 
@@ -83,7 +87,6 @@ class BrookiesOrder : AppCompatActivity() {
             val message = "Added $quantity pack(s) of $selectedPack-piece brownies to cart!"
             Toast.makeText(this, message, Toast.LENGTH_SHORT).show()
 
-            val initialPrice = quantity * selectedPrice
             val productName = "Brookies"
             val marketPage = Intent(this, Market::class.java)
 
@@ -91,7 +94,7 @@ class BrookiesOrder : AppCompatActivity() {
                 putString("name", productName)
                 putInt("qty", quantity)
                 putInt("pack", selectedPack)
-                putDouble("price", initialPrice)
+                putDouble("unitPrice", selectedPrice)
             }
 
             marketPage.putExtra("brookiesBundle", brookiesBundle)

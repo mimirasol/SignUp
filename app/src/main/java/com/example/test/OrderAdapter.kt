@@ -6,6 +6,7 @@ import android.view.ViewGroup
 import android.widget.ImageButton
 import android.widget.ImageView
 import android.widget.TextView
+import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
 
 class OrderAdapter(private val orders: MutableList<Market.Order>) :
@@ -42,9 +43,15 @@ class OrderAdapter(private val orders: MutableList<Market.Order>) :
         holder.itemImg.setImageResource(resId)
 
         holder.addBtn.setOnClickListener {
-            order.qty += 1
-            holder.itemQty.text = "${order.qty}"
-            holder.itemPrice.text = "₱${order.price}"
+            if (order.qty < 10) {
+                order.qty += 1
+                holder.itemQty.text = "${order.qty}"
+                holder.itemPrice.text = "₱${order.price}"
+                (holder.itemView.context as? Cart)?.updateTotals()
+            } else {
+                val message = "Max order quantity is 10!"
+                Toast.makeText(holder.itemView.context, message, Toast.LENGTH_SHORT).show()
+            }
         }
 
         // Minus button
@@ -53,6 +60,7 @@ class OrderAdapter(private val orders: MutableList<Market.Order>) :
                 order.qty -= 1
                 holder.itemQty.text = "${order.qty}"
                 holder.itemPrice.text = "₱${order.price}"
+                (holder.itemView.context as? Cart)?.updateTotals()
             }
         }
 
@@ -61,6 +69,7 @@ class OrderAdapter(private val orders: MutableList<Market.Order>) :
             orders.removeAt(position)
             notifyItemRemoved(position)
             notifyItemRangeChanged(position, orders.size)
+            (holder.itemView.context as? Cart)?.updateTotals()
         }
     }
 

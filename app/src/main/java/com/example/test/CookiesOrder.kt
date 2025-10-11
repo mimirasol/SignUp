@@ -66,13 +66,17 @@ class CookiesOrder : AppCompatActivity() {
         }
 
         choice1.setOnCheckedChangeListener { _, isChecked ->
-            if (isChecked) selectedPack = 1
-                           selectedPrice = 45.00
+            if (isChecked) {
+                selectedPack = 1
+                selectedPrice = 45.00
+            }
         }
 
         choice2.setOnCheckedChangeListener { _, isChecked ->
-            if (isChecked) selectedPack = 5
-                           selectedPrice = 220.00
+            if (isChecked) {
+                selectedPack = 5
+                selectedPrice = 220.00
+            }
         }
 
 
@@ -81,7 +85,6 @@ class CookiesOrder : AppCompatActivity() {
             val message = "Added $quantity pack(s) of $selectedPack-piece brownies to cart!"
             Toast.makeText(this, message, Toast.LENGTH_SHORT).show()
 
-            val initialPrice = quantity * selectedPrice
             val productName = "Choco Chip Cookies"
             val marketPage = Intent(this, Market::class.java)
 
@@ -89,7 +92,7 @@ class CookiesOrder : AppCompatActivity() {
                 putString("name", productName)
                 putInt("qty", quantity)
                 putInt("pack", selectedPack)
-                putDouble("price", initialPrice)
+                putDouble("unitPrice", selectedPrice)
             }
 
             marketPage.putExtra("cookiesBundle", cookiesBundle)
